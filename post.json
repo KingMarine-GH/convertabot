@@ -1,0 +1,28 @@
+{
+    "name": "convert-temp",
+    "description": "Convert C to F or F to C!",
+    "options": [
+        {
+            "type": 3,
+            "name": "original-unit",
+            "description": "Is the original unit C or F?",
+            "required": true,
+            "choices": [
+                {
+                    "name": "Celsius",
+                    "value": "c"
+                },
+                {
+                    "name": "Fahrenheit",
+                    "value": "f"
+                }
+            ]
+        },
+        {
+            "type": 4,
+            "name": "value",
+            "description": "How many C/F?",
+            "required": true
+        }
+    ]
+}
