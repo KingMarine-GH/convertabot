@@ -14,6 +14,7 @@ You can also put `MONITOR="www.monitor-service.kingmarine"` to add uptime monito
 Please ensure that you've already registered the commands via `command.json`. Check Discord's documentation page on how to register. Global or Guild command works.
 
 [Global Command](https://discord.com/developers/docs/interactions/slash-commands#create-global-application-command)
+
 [Guild Comamnd](https://discord.com/developers/docs/interactions/slash-commands#create-guild-application-command)
 
 ## Commands
