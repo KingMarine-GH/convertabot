@@ -6,27 +6,8 @@ const axios = require("axios").default
 
 const client = new Discord.Client();
 
-/**
- * This function is configured for POST monitors, you can modify this function for whatever mode your monitor uses.
- * @returns {void}
- */
-function startMonitor(url, time) {
-    setInterval(link => {
-        axios.post(link);
-    }, time, url);
-}
-
 client.once("ready", () => {
     console.log("Ready!");
-
-    if (process.env.MONITOR) {
-        /**
-         * Default time: 5 mins
-         */
-        const time = process.env.TIME || 300000
-
-        startMonitor(process.env.MONITOR, time);
-    }
 });
 
 client.on("raw", e => {
