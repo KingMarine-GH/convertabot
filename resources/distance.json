@@ -1,0 +1,76 @@
+{
+    "name": "convert-dist",
+    "description": "Convert distance units like km to mi",
+    "options": [
+        {
+            "type": 3,
+            "name": "original-unit",
+            "description": "What is the original unit?",
+            "required": true,
+            "choices": [
+                {
+                    "name": "Meter",
+                    "value": "m"
+                },
+                {
+                    "name": "Kilometer",
+                    "value": "km"
+                },
+                {
+                    "name": "Inch",
+                    "value": "in"
+                },
+                {
+                    "name": "Foot",
+                    "value": "ft"
+                },
+                {
+                    "name": "Yard",
+                    "value": "yd"
+                },
+                {
+                    "name": "Mile",
+                    "value": "mi"
+                }
+            ]
+        },
+        {
+            "type": 3,
+            "name": "desired-unit",
+            "description": "What unit do you want to convert to?",
+            "required": true,
+            "choices": [
+                {
+                    "name": "Meter",
+                    "value": "m"
+                },
+                {
+                    "name": "Kilometer",
+                    "value": "km"
+                },
+                {
+                    "name": "Inch",
+                    "value": "in"
+                },
+                {
+                    "name": "Foot",
+                    "value": "ft"
+                },
+                {
+                    "name": "Yard",
+                    "value": "yd"
+                },
+                {
+                    "name": "Mile",
+                    "value": "mi"
+                }
+            ]
+        },
+        {
+            "type": 4,
+            "name": "value",
+            "description": "How long?",
+            "required": true
+        }
+    ]
+}
