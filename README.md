@@ -8,8 +8,8 @@ Once this respository has been downloaded, please run `npm i` to install all req
 
 Create the file `.env` and put `TOKEN="super-secret-token"` for the bot to run.
 
-You can also put `MONITOR="www.monitor-service.kingmarine"` to add uptime monitoring for your bot.
-*This feature is not yet implemented, but will be at v1.1.*
+You can also put `MONITOR="www.monitor-service.kingmarine"` to add uptime monitoring for your bot. The bot supports POST (or push) monitors.
+Add in `TIME` to set a timer for POST. Default is 5 mins.
 
 Please ensure that you've already registered the commands via `command.json`. Check Discord's documentation page on how to register. Global or Guild command works.
 
