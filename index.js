@@ -89,7 +89,7 @@ client.on("raw", e => {
                 switch(original_unit) {
                     case "km": {
                     //  1km    = 1000m
-                        value /= 1000;
+                        value *= 1000;
                         system = "metric";
                         break;
                     }
@@ -136,7 +136,7 @@ client.on("raw", e => {
                 switch(desired_unit) {
                     case "km": {
                     //  1000m  = 1km
-                        value *= 1000;
+                        value /= 1000;
                         break;
                     }
                     case "m": {
