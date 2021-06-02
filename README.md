@@ -6,7 +6,7 @@ Simple C to F (vice versa) converter, because Americans love their freedom units
 
 All of my not intensive bots will be hosted for public use (I may change my mind at any time).
 
-For this bot, you can [Invite link here](https://discord.com/api/oauth2/authorize?client_id=849130462747164732&permissions=0&scope=bot%20applications.commands).
+For this bot, you can [invite the bot via this link](https://discord.com/api/oauth2/authorize?client_id=849130462747164732&permissions=0&scope=bot%20applications.commands).
 
 You can find the status of all my hosted bots for the public [here](https://uptime.statuscake.com/?TestID=IRi2EiG69R).
 
