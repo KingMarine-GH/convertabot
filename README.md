@@ -2,6 +2,14 @@
 
 Simple C to F (vice versa) converter, because Americans love their freedom units too much
 
+## Public Hosting
+
+All of my not intensive bots will be hosted for public use (I may change my mind at any time).
+
+For this bot, you can [Invite link here](https://discord.com/api/oauth2/authorize?client_id=849130462747164732&permissions=0&scope=bot%20applications.commands).
+
+You can find the status of all my hosted bots for the public [here](https://uptime.statuscake.com/?TestID=IRi2EiG69R).
+
 ## Installation
 
 Once this respository has been downloaded, please run `npm i` to install all required packages.
