@@ -6,8 +6,32 @@ const axios = require("axios").default
 
 const client = new Discord.Client();
 
+/**
+ * This function is configured for POST monitors, you can modify this function for whatever mode your monitor uses.
+ * @returns {void}
+ */
+function startMonitor(url, time) {
+    axios.post(url).then(() => {
+        console.log("Sent a push to monitor");
+    });
+    setInterval(link => {
+        axios.post(link).then(() => {
+            console.log("Sent a push to monitor");
+        });
+    }, time, url);
+}
+
 client.once("ready", () => {
     console.log("Ready!");
+
+    if (process.env.MONITOR) {
+        /**
+         * Default time: 5 mins
+         */
+        const time = process.env.TIME || 300000
+
+        startMonitor(process.env.MONITOR, time);
+    }
 });
 
 client.on("raw", e => {
@@ -38,10 +62,10 @@ client.on("raw", e => {
                 switch (options[0].value) {
                     // option 0 is original temp
                     case "C":
-                        reply(`${temp}ºC = ${(temp * (9/5)) + 32}ºF`);
+                        reply(`${temp}ºC = ${Math.round(((temp * (9/5)) + 32) * 100) / 100}ºF`);
                         break;
                     case "F":
-                        reply(`${temp}ºF = ${(temp - 32) * (5/9)}ºC`);
+                        reply(`${temp}ºF = ${Math.round(((temp - 32) * (5/9)) * 100) / 100}ºC`);
                         break;
                 }
                 break;
