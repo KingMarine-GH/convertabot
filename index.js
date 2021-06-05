@@ -105,14 +105,20 @@ client.on("raw", e => {
                     }
                     case "ft": {
                         system = "imperial";
+                    //  1ft    = 12in
+                        value *= 12;
                         break;
                     }
                     case "yd": {
                         system = "imperial";
+                    //  1yd    = 36in
+                        value *= 36;
                         break;
                     }
                     case "mi": {
                         system = "imperial";
+                    //  1mi    = 63360in
+                        value *= 63360;
                         break;
                     }
                 }
