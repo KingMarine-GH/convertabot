@@ -61,7 +61,7 @@ client.on("raw", e => {
             if (!regex.test(value)) {
                 // failed test
                 reply("Your value is invalid! Please make sure there are no letters, spaces, or commas. Negative and decimal (as `.`) numbers are accepted.");
-                return;
+                return true;
             }
         };
 
@@ -71,7 +71,7 @@ client.on("raw", e => {
             case "convert-temp": {
                 const value = options[1].value;
 
-                checkString(value);
+                if (checkString(value)) { return; }
 
                 switch (original_unit) {
                     // option 0 is original temp
@@ -89,7 +89,7 @@ client.on("raw", e => {
                 let value = options[2].value;
                 let system;
 
-                checkString(value);
+                if (checkString(value)) { return; }
 
                 // workflow:
                 // if metric:
