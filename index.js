@@ -55,11 +55,23 @@ client.on("raw", e => {
             });
         };
 
+        // check if string is purely numbers/demical, i dont trust people anymore
+        const checkString = value => {
+            const regex = /^(-)?[0-9]+(.)?([0-9]+)?$/;
+            if (!regex.test(value)) {
+                // failed test
+                reply("Your value is invalid! Please make sure there are no letters, spaces, or commas. Negative and decimal (as `.`) numbers are accepted.");
+                return true;
+            }
+        };
+
         const original_unit = options[0].value;
         
         switch (name) {
             case "convert-temp": {
                 const value = options[1].value;
+
+                if (checkString(value)) { return; }
 
                 switch (original_unit) {
                     // option 0 is original temp
@@ -76,6 +88,8 @@ client.on("raw", e => {
                 const desired_unit = options[1].value;
                 let value = options[2].value;
                 let system;
+
+                if (checkString(value)) { return; }
 
                 // workflow:
                 // if metric:
