@@ -27,7 +27,10 @@ Please ensure that you've already registered the commands via `command.json`. Ch
 
 ## Commands
 
-This bot currently has 1 command, `/convert-temp`. It converts F to C and vice versa.
+This bot currently has 2 commands: 
+
+- `/convert-temp`. It converts F to C and vice versa.
+- `/convert-dist`, It converts distances.
 
 ## Copyright
 
