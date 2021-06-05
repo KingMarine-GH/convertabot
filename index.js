@@ -55,6 +55,14 @@ client.on("raw", e => {
             });
         };
 
+        // check if string is purely numbers/demical, i dont trust people anymore
+        const regex = /^(-)?[0-9]+(.)?([0-9]+)?$/;
+        if (!regex.test(options[1].value)) {
+            // failed test
+            reply("Your value is invalid! Please make sure there are no letters, spaces, or commas. Negative and decimal (as `.`) numbers are accepted.");
+            return;
+        }
+
         const original_unit = options[0].value;
         
         switch (name) {
