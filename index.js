@@ -122,8 +122,11 @@ client.on("raw", e => {
                         break;
                     }
                 }
-                // checks if system is already metric and if desired unit is also metric, returns the opposite
-                if (!(system == "metric" && (desired_unit == "km" || desired_unit == "m"))) {
+
+                const metric = ["km", "m"];
+                const imperial = ["in", "ft", "yd", "mi"];
+
+                if (!((system == "metric" && (metric.indexOf(desired_unit) != -1)) || (system == "imperial" && (imperial.indexOf(desired_unit) != -1)))) {
                     // system and unit doesn't match, converting it to the base counterparts
                     switch(system) {
                         case "metric": {
